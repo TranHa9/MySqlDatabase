@@ -29,6 +29,7 @@ create table categories(
     name  varchar(50)
 );
 
+-- tạo bảng sản phẩm
 create table product(
 	product_id int primary key,
     name varchar(50),
