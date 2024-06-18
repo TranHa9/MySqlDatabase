@@ -84,8 +84,8 @@ create table inventory (
 create table inventory_provider (
     provider_id int,
     product_id int,
-    input_quantity int,
-    import_price float,
+    input_quantity int, -- số lượng nhập
+    import_price float, -- giá nhập
     provider_date date, -- ngày nhập
     foreign key (provider_id) references provider(provider_id),
     foreign key (product_id) references product(product_id)
@@ -200,5 +200,9 @@ insert into inventory_provider (provider_id, product_id, input_quantity, import_
 (9, 9, 900, 25000, '2024-06-11'),
 (10, 10, 1000, 150000, '2024-06-11');
 
+select * from bill;
 
+select count(bill_id) as soluong
+from bill
+where customer_id = 2;
 
